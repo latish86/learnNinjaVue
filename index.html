@@ -11,7 +11,8 @@
 <body>
   <div id="vue-app">
     <h1>Events</h1>
-    <button v-on:click="add(1)">Add a year</button>
+    <a v-on:click.prevent="click" href="http://ijun.ru">ijun.ru</a>
+    <button v-on:click.once="add(1)">Add a year</button>
     <button v-on:click="substract(1)">Substract a year</button>
     <button v-on:dblclick="add(10)">Add 10 year</button>
     <button v-on:dblclick="substract(10)">Substract 10 year</button>
