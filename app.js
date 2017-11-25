@@ -5,16 +5,31 @@ new Vue({
     job: 'Ninjas', 
     website: 'http://ijun.ru',
     websiteTag : '<a href="http://ijun.ru">Site</a>',
-    age: '',
-    x: 0,
-    y: 0
+    age: 20,
+    a: 0,
+    b: 0
   },
   methods:{
-    logName: function(){
-      console.log("you entered you name")
+    // addToA: function(){
+    //   console.log('testAAAA')
+    //   return this.a + this.age
+    // },
+    // addToB: function(){
+    //   console.log('testBBB')
+    //   return this.b + this.age
+    // },
+    // test: function(){
+    //   console.log('test')
+    // }
+  },
+  computed:{
+    addToA: function(){
+      console.log('testAAAA')
+      return this.a + this.age
     },
-    logAge: function(){
-      console.log("you entered you age")
+    addToB: function(){
+      console.log('testBBB')
+      return this.b + this.age
     }
   }
 });

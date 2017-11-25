@@ -6,18 +6,17 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://unpkg.com/vue"></script>
   <link rel="stylesheet" href="style.css">
-  <title>Events</title>
+  <title>Computed properties</title>
 </head>
 <body>
   <div id="vue-app">
-    <h1>Events keyboard</h1>
-    <label>Name</label>
-    <input type="text" v-model="name" >
-    <span>{{ name }}</span>
-    </br></br>
-    <label>Age</label>
-    <input type="text" v-model="age">
-    <span>{{ age }}</span>
+    <h1>Computed properties</h1>
+    <button v-on:click="a++">A+</button>
+    <button v-on:click="b++">B+</button>
+    <p>A - {{ a }}</p>
+    <p>B - {{ b }}</p>
+    <p>Age + a - {{ addToA }}</p>
+    <p>Age + b - {{ addToB }}</p>
   </div>
   <script src="./app.js"></script>
 </body>
