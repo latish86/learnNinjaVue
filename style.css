@@ -4,3 +4,13 @@
   text-align: center;
   border: solid 1px black;
 }
+
+.red{
+  color: red;  
+}
+.ital{
+  font-style: italic;
+}
+.blue{
+  color: blue;
+}
