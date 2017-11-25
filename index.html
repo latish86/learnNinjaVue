@@ -5,15 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://unpkg.com/vue"></script>
-  <title>Data binding</title>
+  <link rel="stylesheet" href="style.css">
+  <title>Events</title>
 </head>
 <body>
   <div id="vue-app">
-    <p>Name: {{ name }}</p>
-    <p>Job: {{ job }}</p>
-    <p>Site: <a v-bind:href="website">Ijun.ru</a></p>
-    <input type="text" name="text" id="text" v-bind:value="website">
-    <p v-html="websiteTag">!!! Этот html не отображается !!!</p>
+    <h1>Events</h1>
+    <button v-on:click="add(1)">Add a year</button>
+    <button v-on:click="substract(1)">Substract a year</button>
+    <button v-on:dblclick="add(10)">Add 10 year</button>
+    <button v-on:dblclick="substract(10)">Substract 10 year</button>
+    <p>My age is {{age}}</p>
+    <div id="canvas" v-on:mousemove="updateXY">{{ x }}, {{ y }} </div>
   </div>
   <script src="./app.js"></script>
 </body>
