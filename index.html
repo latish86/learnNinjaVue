@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,23 +9,18 @@
   <link rel="stylesheet" href="style.css">
   <title>Computed properties</title>
 </head>
+
 <body>
-  <div id="vue-app">
-    <h3>Loops</h3>
-    <div v-for="(character, index) in characters">{{ character }} = {{ index }}</div>
-    <ul>
-      <li v-for="ninja in ninjas">Name: {{ ninja.name }}<br>Age: {{ ninja.age}}</li>
-    </ul>
-    <template v-for="ninja in ninjas">
-      <h4>Name: {{ ninja.name }}</h4>
-      Age: {{ ninja.age}}
-    </template>
-    <template v-for="ninja in ninjas">
-        <div v-for="(value, key) in ninja">
-          <p>Key: {{ key }}...Value: {{ value }}</p>
-        </div>
-      </template>
+  <div id="vue-app-one">
+    <h2>{{ title }}</h2>
+    <p>{{ greet }}</p>
+  </div>
+  <div id="vue-app-two">
+    <h2>{{ title }}</h2>
+    <p>{{ greet }}</p>
+    <button v-on:click="changeTitleAppOne">Change title App one</button>
   </div>
   <script src="./app.js"></script>
 </body>
+
 </html>
