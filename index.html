@@ -10,15 +10,20 @@
 </head>
 <body>
   <div id="vue-app">
-    <h3>Conditionals</h3>
-    
-    <button v-on:click="error = !error">Toogle Erro</button>
-    <button v-on:click="success = !success">Toogle Succes</button>
-    <button v-on:click="show = !show">Toogles</button>
-
-    <p v-if="error" v-bind:class="{ital: true}" class="red">Произошла ошибка :(</p>
-    <p v-else-if="success" v-bind:class="{ital: true}" class="green">Все отлично :)</p>
-    <p v-show="show" v-bind:class="{ital: true}" class="blue">Переключатель</p>
+    <h3>Loops</h3>
+    <div v-for="(character, index) in characters">{{ character }} = {{ index }}</div>
+    <ul>
+      <li v-for="ninja in ninjas">Name: {{ ninja.name }}<br>Age: {{ ninja.age}}</li>
+    </ul>
+    <template v-for="ninja in ninjas">
+      <h4>Name: {{ ninja.name }}</h4>
+      Age: {{ ninja.age}}
+    </template>
+    <template v-for="ninja in ninjas">
+        <div v-for="(value, key) in ninja">
+          <p>Key: {{ key }}...Value: {{ value }}</p>
+        </div>
+      </template>
   </div>
   <script src="./app.js"></script>
 </body>

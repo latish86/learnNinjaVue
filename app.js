@@ -1,9 +1,12 @@
 new Vue({
   el: '#vue-app',
   data: {
-    error: false,
-    success: false,
-    show: false,
+    characters: ['Mario', 'Luigi', 'Yoshi', 'Bowser'],
+    ninjas: [
+      {name: 'Rui', age: 25},
+      {name: 'Yoshi', age: 35},
+      {name: 'Ken', age: 55}
+    ]
   },
   methods:{
   },
