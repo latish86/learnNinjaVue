@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <script src="https://unpkg.com/vue"></script>
-  <title>Document</title>
+  <title>Data binding</title>
 </head>
 <body>
   <div id="vue-app">
-    <h1>{{ good('moon') }}</h1>
     <p>Name: {{ name }}</p>
     <p>Job: {{ job }}</p>
+    <p>Site: <a v-bind:href="website">Ijun.ru</a></p>
+    <input type="text" name="text" id="text" v-bind:value="website">
+    <p v-html="websiteTag">!!! Этот html не отображается !!!</p>
   </div>
   <script src="./app.js"></script>
 </body>
