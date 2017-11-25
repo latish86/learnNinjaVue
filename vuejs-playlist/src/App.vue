@@ -1,6 +1,13 @@
 <template>
   <div>
-    <app-header></app-header>
+    <app-header v-bind:title="title"></app-header>
+    <hr>
+    <p>При нажатии на заголовок меняется заголовок тролько в одном элементе.
+      т.к. строка передается как <strong>значение</strong>.
+    </p>
+    <app-header v-bind:title="title"></app-header>
+    <app-content v-bind:ninjas="ninjas"></app-content>
+    <hr>
     <app-content v-bind:ninjas="ninjas"></app-content>
     <app-footer></app-footer>
   </div>
@@ -27,7 +34,8 @@ export default {
         {name: 'Tango', speciality: 'Conditionals', show: false},
         {name: 'Kami', speciality: 'Webpack', show: false},
         {name: 'Yoshi', speciality: 'Data Diggin', show: false}
-      ]
+      ],
+      title: 'App Ninja'
     }
   }
 }

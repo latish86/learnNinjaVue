@@ -6,6 +6,8 @@
         <h3 v-show="ninja.show">speciality: {{ ninja.speciality }}</h3>
       </li>
     </ul>
+    <p>Кнопка удаляет ninja из списка. Изменяетя оба списка т.к. объект передается по ссылке</p>
+    <button @click="delNinja">Del Ninjas()</button>
   </div>
 </template>
 
@@ -23,6 +25,11 @@ export default {
     return {
       
     }      
+  },
+  methods:{
+    delNinja: function(){
+      this.ninjas.pop();
+    }
   }
 }
 </script>
@@ -30,5 +37,11 @@ export default {
 <style scoped>
   h2, h3{
     margin: 3px;
+  }
+  p{
+    padding: 10px;
+  }
+  button{
+    margin: 10px;
   }
 </style>
