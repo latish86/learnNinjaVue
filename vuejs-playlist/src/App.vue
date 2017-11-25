@@ -1,27 +1,33 @@
 <template>
   <div>
-    <h1>{{ title }}</h1>
-    <ninjas></ninjas>
-    <localNinjas></localNinjas>
+    <app-header></app-header>
+    <app-content></app-content>
+    <app-footer></app-footer>
   </div>
 </template>
 
 <script>
-import La from './locallatish.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
+import Content from './components/Content.vue'
 
 
 export default {
   components:{
-    'localNinjas': La
+    'app-header': Header,
+    'app-footer': Footer,
+    'app-content': Content
   },
   data () {
     return {
-      title: 'LA App'
     }
   }
 }
 </script>
 
 <style>
-
+  body{
+    margin: 0;
+    padding: 0;
+  }
 </style>
