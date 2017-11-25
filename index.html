@@ -10,15 +10,15 @@
 </head>
 <body>
   <div id="vue-app">
-    <h3>Dynamic css</h3>
-    <h2>Example1</h2>
-    <button v-on:click="checkColor">Toogle color</button>
-    <button v-on:click="checkStyle">Toogle style</button>
-    <div v-bind:class="{red: red, ital}">Lorem, ipsum.</div>
-    <h2>Example2</h2>
-    <button v-on:click="checkColor">Toogle color</button>
-    <button v-on:click="checkStyle">Toogle style</button>
-    <div v-bind:class="Ex2Classes">Lorem, ipsum.</div>
+    <h3>Conditionals</h3>
+    
+    <button v-on:click="error = !error">Toogle Erro</button>
+    <button v-on:click="success = !success">Toogle Succes</button>
+    <button v-on:click="show = !show">Toogles</button>
+
+    <p v-if="error" v-bind:class="{ital: true}" class="red">Произошла ошибка :(</p>
+    <p v-else-if="success" v-bind:class="{ital: true}" class="green">Все отлично :)</p>
+    <p v-show="show" v-bind:class="{ital: true}" class="blue">Переключатель</p>
   </div>
   <script src="./app.js"></script>
 </body>

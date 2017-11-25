@@ -4,9 +4,15 @@
   text-align: center;
   border: solid 1px black;
 }
-
+h3{
+  text-align: center;
+}
 .red{
   color: red;  
+}
+.green{
+  color: rgb(32, 192, 26);
+  font-weight: 800;  
 }
 .ital{
   font-style: italic;
