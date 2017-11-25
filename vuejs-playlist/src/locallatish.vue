@@ -7,14 +7,16 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {
-      ninjas: ['Yoishi', 'MArio', 'Mira', 'Koko']
-    }
+      ninjas: ["Yoishi", "MArio", "Mira", "Koko"]
+    };
   }
-}
+};
 </script>
 
-<style>
-
+<style scoped>
+  h1 {
+    color: purple;
+  }
 </style>
