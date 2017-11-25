@@ -1,30 +1,27 @@
-var one = new Vue({
-  el: '#vue-app-one',
-  data: {
-    title: 'App one'
+Vue.component('greeting', {
+  template:'\
+    <div>\
+      <p>Hey guies!!! I am {{ name }}</p>\
+      <button @click="changeName">Change name</button>\
+    </div>\
+  ',
+  data: function(){
+    return {
+      name: 'VAsya'
+    }
   },
   methods:{
-  },
-  computed:{
-    greet: function(){
-      return 'Hello app ONNNNEEE!!!'
+    changeName: function(){
+      this.name = 'Kostya'
     }
   }
+})
+
+
+var one = new Vue({
+  el: '#vue-app-one'
 });
 
 var two = new Vue({
-  el: '#vue-app-two',
-  data: {
-    title: 'App two'
-  },
-  methods:{
-    changeTitleAppOne: function(){
-      one.title = 'Title change'
-    }
-  },
-  computed:{
-    greet: function(){
-      return 'Hello app two!!!'
-    }
-  }
+  el: '#vue-app-two'
 });
