@@ -1,10 +1,7 @@
 <template>
   <div>
-    <app-header v-bind:title="title"></app-header>
+    <app-header v-bind:title="title" v-on:changeTitle="changeTitle($event)"></app-header>
     <hr>
-    <p>При нажатии на заголовок меняется заголовок тролько в одном элементе.
-      т.к. строка передается как <strong>значение</strong>.
-    </p>
     <app-header v-bind:title="title"></app-header>
     <app-content v-bind:ninjas="ninjas"></app-content>
     <hr>
@@ -36,6 +33,11 @@ export default {
         {name: 'Yoshi', speciality: 'Data Diggin', show: false}
       ],
       title: 'App Ninja'
+    }
+  },
+  methods:{
+    changeTitle: function(updateTitle){
+      this.title = updateTitle.name;
     }
   }
 }

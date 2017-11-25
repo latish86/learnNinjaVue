@@ -17,7 +17,7 @@ export default {
   },
   methods:{
     changeTitle: function(){
-      this.title = 'Changed!!!!!!!!!'
+      this.$emit('changeTitle', {name: 'Changed!!!!!!!!!'});
     }
   }
 };
