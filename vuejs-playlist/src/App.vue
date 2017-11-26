@@ -1,43 +1,23 @@
 <template>
   <div>
-    <app-header v-bind:title="title" v-on:changeTitle="changeTitle($event)"></app-header>
-    <hr>
-    <app-header v-bind:title="title"></app-header>
-    <app-content v-bind:ninjas="ninjas"></app-content>
-    <hr>
-    <app-content v-bind:ninjas="ninjas"></app-content>
-    <app-footer></app-footer>
+    <form-helper>
+      <h2 slot="title">{{title}}</h2>
+      <p slot="text">I am paragraph text for the slot</p>
+    </form-helper>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Footer from './components/Footer.vue'
-import Content from './components/Content.vue'
+import formHelper from './components/formHelper.vue'
 
 
 export default {
   components:{
-    'app-header': Header,
-    'app-footer': Footer,
-    'app-content': Content
+    'form-helper': formHelper,
   },
   data () {
     return {
-      ninjas: [
-        {name: 'Ryu', speciality: 'Vue Components', show: false},
-        {name: 'Crystal', speciality: 'HTML Wizardry', show: false},
-        {name: 'Hitoshi', speciality: 'Click Events', show: false},
-        {name: 'Tango', speciality: 'Conditionals', show: false},
-        {name: 'Kami', speciality: 'Webpack', show: false},
-        {name: 'Yoshi', speciality: 'Data Diggin', show: false}
-      ],
-      title: 'App Ninja'
-    }
-  },
-  methods:{
-    changeTitle: function(updateTitle){
-      this.title = updateTitle.name;
+      title: 'Slot title'
     }
   }
 }
