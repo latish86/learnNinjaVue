@@ -1,23 +1,30 @@
 <template>
   <div>
-    <form-helper>
-      <h2 slot="title">{{title}}</h2>
-      <p slot="text">I am paragraph text for the slot</p>
-    </form-helper>
+    <h2>Add a new Blog Post</h2>
+    <form>
+      <label>Blog title:</label>
+      <input type="text" v-model.lazy="blog.title">
+      <label>Blog Content:</label>
+      <textarea v-model.lazy="blog.content"></textarea>
+    </form>
+    <div id="preview">
+      <h3>Preview Blog</h3>
+      <p>Blog title: {{ blog.title }}</p>
+      <p>Blog content:</p>
+      <p>{{ blog.content }}</p>
+    </div>
   </div>
 </template>
 
 <script>
-import formHelper from './components/formHelper.vue'
-
 
 export default {
-  components:{
-    'form-helper': formHelper,
-  },
   data () {
     return {
-      title: 'Slot title'
+      blog:{
+        title: '',
+        Content: ''
+      }
     }
   }
 }
