@@ -1,15 +1,22 @@
 <template>
 <footer>
-  <p>{{ copyright }}</p>
+  <p>{{ copyright }} {{ title }}</p>
 </footer>
 </template>
 
 <script>
+import { bus } from '../main'
 export default {
   data() {
     return {
-      copyright: 'copyright 2017 ninjas'
+      copyright: 'copyright 2017',
+      title: 'Vue ninjas'
     };
+  },
+  created(){
+    bus.$on('titleChange', (data)=>{
+      this.title = data;
+    })
   }
 };
 </script>
